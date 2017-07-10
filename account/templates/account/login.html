@@ -1,0 +1,57 @@
+{% extends 'base/main_manager.html' %}
+{% load static %}
+{% block title %}
+    Login :: HMO Platform
+{% endblock %}
+
+{% block banner_section %}
+    {#    <div class="banner-section banner-image">#}
+    {#				<div class="container gallery">#}
+    {#					<div class="book-appointment-section appoint-link"	>#}
+    {#						<a href="#" class="inner-sec"> <span class="anchor-icon"> <i class="icon-user"></i> </span> Create Your Account </a>#}
+    {#					</div>#}
+    {#				</div>#}
+    {#			</div>#}
+{% endblock %}
+
+{% block content %}
+    <section class="careers ptb ptb-sm">
+        <div class="container">
+            <div class="sec-title">
+            </div>
+            <div class="row mb-80">
+                <div class="col-sm-12 col-md-6 col-md-offset-3">
+                    <div class="diagnostic">
+                        <div class="sub-heading">
+                            <h3>Login Form</h3>
+                            <p class="c-white"> All fields are required.</p>
+                        </div>
+                        <form method="post" novalidate="novalidate">
+                            {% csrf_token %}
+                            {% if form.non_field_errors %}
+                                {{ form.non_field_errors }}
+                            {% endif %}
+                            <div class="row">
+                                <div class="row">
+                                    <div class="col-sm-12 mb-23">
+                                        <label class="form_label">Username *</label>
+                                        <input name="username" class="input-txt" type="email" placeholder="Username*">
+                                        <span class="form_error">{{ form.username.errors }}</span>
+                                    </div>
+                                    <div class="col-sm-12 mb-23">
+                                        <label class="form_label">Password *</label>
+                                        <input name="password" class="input-txt" type="password" placeholder="Password*">
+                                        <span class="form_error">{{ form.password.errors }}</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <input class="btn" type="submit" value="Login">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+    {#		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">#}
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/layers.css' %}" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/navigation.css' %}" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/settings.css' %}" media="screen"/>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,300%7CLibre+Baskerville:400,400italic'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/owl.carousel.css' %}" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.css' %}" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/simple-line-icons.css' %}" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/global.css' %}" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/responsive.css' %}" media="screen"/>
+    <link href="{% static 'assets/css/skin.less' %}" rel="stylesheet/less">
+    <style>
+        .form_label {
+            width: 100%;
+            margin-bottom: 6px;
+        }
+
+        .form-pack {
+            margin-bottom: 20px;
+        }
+        .c-white{
+            color:white;
+        }
+        .form_error {
+            width: 100%;
+            color: yellow;
+            font-size: 13px;
+        }
+    </style>
+    {% block css %} {% endblock %}
+
+</head>
+<!--Content Area End-->
+<body>
+<!--Page loader Start-->
+<div class="loader">
+    <div class="sk-circle">
+        <div class="sk-circle1 sk-child"></div>
+        <div class="sk-circle2 sk-child"></div>
+        <div class="sk-circle3 sk-child"></div>
+        <div class="sk-circle4 sk-child"></div>
+        <div class="sk-circle5 sk-child"></div>
+        <div class="sk-circle6 sk-child"></div>
+        <div class="sk-circle7 sk-child"></div>
+        <div class="sk-circle8 sk-child"></div>
+        <div class="sk-circle9 sk-child"></div>
+        <div class="sk-circle10 sk-child"></div>
+        <div class="sk-circle11 sk-child"></div>
+        <div class="sk-circle12 sk-child"></div>
+    </div>
+</div>
+<div id="wrapper">
+    <!--Footer Section Start-->
+    <header class="main-header" id="header">
+        <div class="container clearfix header-upper-section">
+            <a href="index.html" class="header-logo">
+                <figure><img src="{% static 'assets/images/logo.png' %}" alt="logo-image"/>
+                </figure>
+                <span class="txt-wraper"> <strong>Mega Health</strong> <span>premium theme</span> </span> </a>
+            <div class="header-contact-details">
+                <span class="call-details"> <span class="tel-details">call us</span> <a href="tel:85655564555"
+                                                                                        class="tel">8565 5564 555</a> </span>
+                <span class="email-details"> <span class="mail-details">email us</span> <a
+                        href="mailto:info@megahealth.com" class="mail">info@megahealth.com</a> </span>
+            </div>
+        </div>
+        {% include 'base/nav.inc.html' %}
+    </header>
+    {% block banner_section %}
+
+    {% endblock %}
+    {% block content %}
+
+    {% endblock %}
+    {% include 'base/footer.inc.html' %}
+    <!--Footer Section End-->
+</div>
+<!--container Start-->
+<!--Page Wrapper End-->
+<script type="text/javascript" src="{% static 'assets/js/jquery-1.12.3.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery-ui.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/owl.carousel.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/less.js' %}"></script>
+<!-- revolution slider Js -->
+<script type="text/javascript" src="{% static 'assets/js/jquery.themepunch.tools.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery.revolution-one.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script type="text/javascript"
+        src="{% static 'assets/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/extensions/revolution.extension.parallax.min.js' %}"></script>
+<!--  revolution slider Js -->
+<script type="text/javascript" src="{% static 'assets/js/site.js' %}"></script>
+{% block js %} {% endblock %}
+</body>
+</html>
